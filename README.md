@@ -46,7 +46,7 @@ npm install
 3. Create a .env file in the root directory:
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/user-registration
+MONGODB_URI="mongodb url"/user-registration
 ```
 
 4. Start the development servers:
