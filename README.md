@@ -72,7 +72,7 @@ user-registration/
 │   ├── public/            # Public assets
 │   ├── src/               # Source files
 │   │   ├── components/    # React components
-│   │   ├── App.jsx       # Main App component
+│   │   ├── UserRegistrationForm.jsx       # Main App component
 │   │   └── main.jsx      # Entry point
 │   ├── package.json      # Frontend dependencies
 │   └── vite.config.js    # Vite configuration
