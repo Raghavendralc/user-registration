@@ -61,7 +61,11 @@ const UserRegistrationForm = () => {
         userLogin: 'TeAcHaCk'
       };
 
+<<<<<<< HEAD
       const response = await axios.post(`${getApiBaseUrl()}/genders`,formData);
+=======
+      const response = await axios.post(`${getApiBaseUrl()}/users`, formData);
+>>>>>>> bb77074c2c3cd12a5679dd31fca3dc2dea2de12b
       setMessage('User registered successfully!');
       setFormData({
         name: '',
