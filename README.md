@@ -6,14 +6,13 @@ A full-stack user registration system built with React, Node.js, Express, and Mo
 - *Frontend (Vercel)*: [Click here](https://user-registration-hx21mclrs-raghavendralcs-projects.vercel.app/)
 - *Backend (Render)*: [Click here](https://user-registration-backend-bu89.onrender.com)
 
-## For Testing (Database Credentials)
-User: testuser  
-Password: Test1234 
-
 
 ## Backend Repository  
 You can find the backend code [here](https://github.com/Raghavendralc/user-registration-backend).
 
+## For Testing through MongoDB Atlas (Database Credentials)
+User: testuser  
+Password: Test1234 
 
 ![image](https://github.com/user-attachments/assets/c19011b2-d2f3-4e27-9247-76ae123eeaeb)
 
