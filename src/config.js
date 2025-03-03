@@ -3,6 +3,8 @@ const API_BASE_URL = {
     production: 'https://user-registration-backend-bu89.onrender.com/api'
   };
   
-  export const getApiBaseUrl = () => {
+const getApiBaseUrl = () => {
     return import.meta.env.MODE === 'production' ? API_BASE_URL.production : API_BASE_URL.development;
   };
+
+export default getApiBaseUrl;
