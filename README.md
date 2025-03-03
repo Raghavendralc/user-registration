@@ -2,6 +2,40 @@
 
 A full-stack user registration system built with React, Node.js, Express, and MongoDB.
 
+## Live Demo 🌐  
+- *Frontend (Vercel)*: [Click here](https://user-registration-hx21mclrs-raghavendralcs-projects.vercel.app/)
+- *Backend (Render)*: [Click here](https://user-registration-backend-bu89.onrender.com)
+
+## Backend Repository  
+You can find the backend code [here](https://github.com/Raghavendralc/user-registration-backend).
+
+
+![image](https://github.com/user-attachments/assets/c19011b2-d2f3-4e27-9247-76ae123eeaeb)
+
+
+## API Requests and Responses
+
+### 1. Get All Users (`GET /api/users`)
+Example API request and response:
+![Screenshot 2025-03-03 100240](https://github.com/user-attachments/assets/b3076f20-1a72-4dcc-8dc2-63967366f6e5)
+
+
+### 2. Create a New User (`POST /api/users`)
+Example API request and response:
+![Screenshot 2025-03-03 100209](https://github.com/user-attachments/assets/688a492c-1be1-46e3-b800-8eb86e520606)
+
+
+### 3. Update a Existing User (`PUT /api/users`)
+Example API request and response:
+![Screenshot 2025-03-03 100308](https://github.com/user-attachments/assets/605e771a-416f-4511-ae81-9170b16d390b)
+
+
+### 3. DELETE a Existing User (`DELETE /api/users`)
+Example API request and response:
+![Screenshot 2025-03-03 100338](https://github.com/user-attachments/assets/14ebac69-0c75-433c-8269-c859c959cecb)
+
+
+
 ## Features
 
 - User registration with form validation
@@ -84,7 +118,6 @@ user-registration/
 ├── package.json         # Backend dependencies
 └── README.md           # Project documentation
 ```
-
 ## Deployment
 
 The application can be deployed using platforms like:
