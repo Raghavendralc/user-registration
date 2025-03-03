@@ -57,11 +57,11 @@ const UserRegistrationForm = () => {
       // Add current UTC timestamp and user login
       const dataToSubmit = {
         ...formData,
-        timestamp: '2025-03-02 07:05:32',
+        timestamp: '2025-03-03 07:05:32', // Updated to the latest timestamp
         userLogin: 'TeAcHaCk'
       };
 
-      const response = await axios.post(`${getApiBaseUrl()}/genders`,formData);
+      const response = await axios.post(`${getApiBaseUrl()}/users`, dataToSubmit);
       setMessage('User registered successfully!');
       setFormData({
         name: '',
