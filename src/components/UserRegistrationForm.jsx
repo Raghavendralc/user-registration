@@ -20,7 +20,7 @@ const UserRegistrationForm = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Fetch genders from API
+  
     const fetchGenders = async () => {
       try {
         const response = await axios.get(`${getApiBaseUrl()}/genders`);
@@ -53,15 +53,7 @@ const UserRegistrationForm = () => {
       return;
     }
 
-    try {
-      // Add current UTC timestamp and user login
-      const dataToSubmit = {
-        ...formData,
-        timestamp: '2025-03-03 07:05:32', // Updated to the latest timestamp
-        userLogin: 'TeAcHaCk'
-      };
-
-      const response = await axios.post(`${getApiBaseUrl()}/users`, dataToSubmit);
+      const response = await axios.post(`${getApiBaseUrl()}/users`, formData);
       setMessage('User registered successfully!');
       setFormData({
         name: '',
