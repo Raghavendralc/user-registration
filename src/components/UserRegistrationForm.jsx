@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserRegistrationForm.css';
+import { getApiBaseUrl } from '../config';
 
 const UserRegistrationForm = () => {
   const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$/;
@@ -22,7 +23,7 @@ const UserRegistrationForm = () => {
     // Fetch genders from API
     const fetchGenders = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/genders');
+        const response = await axios.get(`${getApiBaseUrl()}/genders`);
         setGenders(response.data);
       } catch (error) {
         setError('Failed to fetch genders');
@@ -60,7 +61,7 @@ const UserRegistrationForm = () => {
         userLogin: 'TeAcHaCk'
       };
 
-      const response = await axios.post('http://localhost:5000/api/users', dataToSubmit);
+      const response = await axios.post(`${getApiBaseUrl()}/genders`,formData);
       setMessage('User registered successfully!');
       setFormData({
         name: '',
