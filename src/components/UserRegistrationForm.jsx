@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserRegistrationForm.css';
+import { getApiBaseUrl } from '../config';
 
 const UserRegistrationForm = () => {
   const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$/;
