@@ -1,0 +1,35 @@
+.user-list {
+    margin: 20px 0;
+  }
+  
+  .user-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .user-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .user-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  .user-list .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
