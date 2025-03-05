@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserRegistrationForm.css';
+import { getApiBaseUrl } from '../config';
 
 const UserRegistrationForm = () => {
   const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$/;
@@ -19,10 +20,10 @@ const UserRegistrationForm = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Fetch genders from API
+  
     const fetchGenders = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/genders');
+        const response = await axios.get(`${getApiBaseUrl()}/genders`);
         setGenders(response.data);
       } catch (error) {
         setError('Failed to fetch genders');
@@ -46,21 +47,14 @@ const UserRegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!isPasswordValid(formData.password)) {
       setError('Password must be at least 10 characters long and contain both letters and numbers');
       return;
     }
-
+  
     try {
-      // Add current UTC timestamp and user login
-      const dataToSubmit = {
-        ...formData,
-        timestamp: '2025-03-02 07:05:32',
-        userLogin: 'TeAcHaCk'
-      };
-
-      const response = await axios.post('http://localhost:5000/api/users', dataToSubmit);
+      const response = await axios.post(`${getApiBaseUrl()}/users`, formData);
       setMessage('User registered successfully!');
       setFormData({
         name: '',
@@ -77,6 +71,7 @@ const UserRegistrationForm = () => {
       console.error('Registration error:', err);
     }
   };
+  
 
   return (
     <div className="registration-form">
